@@ -47,9 +47,15 @@ body{
 #container {
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 33%;
   font:normal 400% Arial, Helvetica, sans-serif;
 
+}
+#Home-header{
+  /*font:normal 400% Arial, Helvetica, sans-serif;*/
+}
+#Home-sub{
+    font:normal 50% Arial, Helvetica, sans-serif;
 }
 
 
