@@ -47,15 +47,25 @@ body{
 #container {
   position: absolute;
   top: 30%;
-  left: 33%;
-  font:normal 400% Arial, Helvetica, sans-serif;
+  left: 10%;
+  font:normal 75% Arial, Helvetica, sans-serif;
 
 }
 #Home-header{
-  /*font:normal 400% Arial, Helvetica, sans-serif;*/
+  font:normal 400% Arial, Helvetica, sans-serif;
 }
 #Home-sub{
-    font:normal 50% Arial, Helvetica, sans-serif;
+    font:normal 150% Arial, Helvetica, sans-serif;
+}
+#Home-link{
+  margin-top: 10%;
+}
+th{
+  font:normal 150% Arial, Helvetica, sans-serif;
+  
+}
+a:hover {
+  text-decoration: underline;
 }
 
 
