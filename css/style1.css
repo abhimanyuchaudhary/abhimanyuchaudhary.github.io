@@ -85,3 +85,40 @@ canvas{
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
+
+/*// Sidebar width*/
+$sidebar-width: 300px;
+
+body{ text-align:center }
+
+/*// Wrap the main content*/
+.wrapper{
+  position: relative;
+  right: 0;
+  transition: all 0.15s ease-out;
+  padding-top: 20px;
+}
+
+/*// Hide the sidebar off the window*/
+.sidebar{
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: -$sidebar-width;
+  z-index: 9999;
+  height: 100%;
+  width: $sidebar-width;
+  transition: all 0.15s ease-out;
+  background: pink;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/*// Shift the sidebar inside the window*/
+.is-shift-sidebar{
+  right: 0;
+}
+/*// Shift the wrapper*/
+.is-shift-content{
+  right: $sidebar-width;
+}
