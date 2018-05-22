@@ -14,26 +14,110 @@
 <body>
 
 	<!-- particles.js container -->
-	<div id="particles-js">
-	</div>
-	<div id = "main">
+	<div id="particles-js"></div>
+	<section class = "panel one">
 		<div id = "container">
-			<div id = "Home-header" style="color:#fff;">Abhimanyu Chaudhary</div>
-			<div id = "Home-sub" style="color:#fff;"> CSE IIITD</div>
-			<div id = "Home-link" style="color:#ddd;"> 
-				<th> <a href = "about.html" style="color:#7289da;">about</a> / </th>
-				<th> <a href = "resume.html" style="color:#7289da;">resume</a> / </th>
-				<th> <a href = "projects.html" style="color:#7289da;">projects</a> / </th>
-				<th> <a href = "contact.html" style="color:#7289da;">contact</a> </th>
+			<div id = "mainheading">
+				<div id = "Home-header">Abhimanyu Chaudhary</div>
+				<div id = "Home-sub"> CSE IIITD</div>
 			</div>
 		</div>
-	</div>
+	</section>
+		
+	<section class = "panel two">
+		<div id = "aboutme">
+			<div id = "aboutmetext">
+				<div id="aboutmebox1">
+					<p>About</p>
+				</div>
+				<div id="aboutmebox2">
+					<p>Me</p>
+				</div>
+			</div>
+			<div id="textboxabout">
+				<p style="font-size: 40px">Hi I'm abhimanyu.</p>
+				<p>I'm currently studying <b>Computer Science</b> at <b>IIITD</b>. </p>
+			</div>
+		</div>
+	</section>
+		<div id="trigger1" class="spacer s0" style="position: absolute; top: 90%;"></div>
+		
+		
+	<section class = "panel three">
+		<div id = "contact">
+			<div id = "contacttext">
+				<div id="contactbox1">
+					<p>Reach</p>
+				</div>
+				<div id="contactbox2">
+					<p>Me</p>
+				</div>
+			</div>
+		</div>	
+	</section>
+		
+	
 
 
 	<!-- scripts -->
 
 	<script src="particles.js"></script>
 	<script src="js/app.js"></script>
+	<script type="text/javascript" src="sm/js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="sm/scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="sm/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="sm/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript" src="sm/js/lib/jquery.min.js"></script>
+	<script>
+		// init controller
+		var controller = new ScrollMagic.Controller();
+	</script>
+	<!-- <script>
+		$(function () { // wait for document ready
+			// init
+			var controller1 = new ScrollMagic.Controller({
+				globalSceneOptions: {
+					triggerHook: 'onLeave'
+				}
+			});
+
+			// get all slides
+			var slides = document.querySelectorAll("section.panel");
+
+			// create scene for every slide
+			for (var i=0; i<slides.length; i++) {
+				new ScrollMagic.Scene({
+						triggerElement: slides[i]
+					})
+					.setPin(slides[i])
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller1);
+			}
+		});
+	</script> -->
+	<script>
+
+		// build scene
+		var scene1 = new ScrollMagic.Scene({
+							triggerElement: "#trigger1"
+						})
+						.setTween("#aboutmebox1", 0.3, {fontSize: 100}) // trigger a TweenMax.to tween
+						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+						.addTo(controller);
+		var scene2 = new ScrollMagic.Scene({
+							triggerElement: "#trigger1"
+						})
+						.setTween("#aboutmebox2", 0.3, {fontSize: 80}) // trigger a TweenMax.to tween
+						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+						.addTo(controller);
+		var scene3 = new ScrollMagic.Scene({
+							triggerElement: "#trigger1"
+						})
+						.setTween("#textboxabout", 1, {opacity: 1}) // trigger a TweenMax.to tween
+						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+						.addTo(controller);
+	</script>
+
 <!-- inspired by christopher.su -->
 </body>
 </html>

@@ -193,7 +193,7 @@ li{list-style:none}*/
 html{ 
 	width:100%;
 	height:100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background-color: #36393E;
   font-family: 'OpenSans-Light', sans-serif;
   font-weight: 100;
@@ -206,11 +206,20 @@ body{
   text-align:center;
 
 }
+
 #container {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+}
+#mainheading {
+  overflow: hidden;
   position: absolute;
   top: 37%;
   left: 10%;
-
+  color: #fff;
 }
 #Home-header{
   font-size:30pt;
@@ -219,16 +228,87 @@ body{
     font-size:150%;
     margin-top: 2%;
 }
-#Home-link{
-  margin-top: 2%;
+
+#aboutme {
+  overflow: hidden;
+  max-width: 70rem;
+  position: relative;
+  min-width: 80%;
+  /*top: 80%;*/
+  height: 100vh;
+  display: inline-block;
+  /*background-color: green;*/
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-a{
-  color: #ff0000;
-  text-decoration: none;
+#aboutmetext{
+  position: relative;
+  /*overflow: hidden;*/
+  top: 0%;
+  color: #7289da; 
+  /*background-color: blue;*/
+  height: 100%;
+  max-width: 50%;
+  font-size: 1px;
 }
-a:hover {
-  text-decoration: underline;
+#aboutmebox1{
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
+#aboutmebox2{
+  position: absolute;
+  top: 12%;
+  left: 47%;
+}
+#textboxabout{
+  color: #fff; 
+  position: absolute; 
+  /*background-color: red;*/
+  max-width: 50%;
+  top: 10%;
+  left: 50%;
+  opacity: 0;
+  width: 70%;
+}
+#contact {
+  overflow: hidden;
+  max-width: 70rem;
+  position: relative;
+  min-width: 80%;
+  /*top: 80%;*/
+  height: 100vh;
+  display: inline-block;
+  /*background-color: green;*/
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#contacttext{
+  position: relative;
+  overflow: hidden;
+  top: 0%;
+  color: #7289da; 
+  /*background-color: blue;*/
+  height: 100%;
+  max-width: 50%;
+}
+#contactbox1{
+  position: absolute;
+  font-size: 100px;
+  top: 0%;
+  left: 0%;
+}
+#contactbox2{
+  position: absolute;
+  font-size: 80px;
+  top: 15%;
+  left: 47%;
+}
+.panel {
+    height: 100vh;
+    width: 100%;
+  }
+
 
 
 canvas{
@@ -242,11 +322,12 @@ canvas{
 
 #particles-js{
   min-width: 100%;
-  height: 1000px;
+  height: 2000px;
   background-size: cover;
+  position: absolute;
   /*background-color: #b61924;*/
   background-image: url("");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
 }
 
