@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --accent-color: #ff6b6b;
+            --background-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --secondary-text: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        header p {
+            margin-top: 10px;
+            color: var(--secondary-text);
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .label {
+            font-weight: 600;
+            width: 120px;
+            color: var(--primary-color);
+        }
+        
+        .value {
+            flex: 1;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .contact-item {
+                flex-direction: column;
+            }
+            .label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customer Support</h1>
+            <p>We're here to help you with any questions or concerns</p>
+        </header>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="label">Name:</span>
+                <span class="value">Abhimanyu Singh Chaudhary</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="label">Email:</span>
+                <span class="value">kaplandeveloper@gmail.com</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="label">Phone:</span>
+                <span class="value">+91 7042305446</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="label">Address:</span>
+                <span class="value">282, Vasant Kunj, New Delhi, 110070</span>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Our support team is available Monday through Friday, 9:00 AM to 5:00 PM IST</p>
+        </footer>
+    </div>
+</body>
+</html>
